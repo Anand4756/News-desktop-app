@@ -1,0 +1,13 @@
+{
+  "name": "news-desktop-app",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Anand",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^16.0.1"
+  },
+  "scripts": {
+    "start": "electron ."
+  }
+}
