@@ -1,0 +1,28 @@
+ *{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #EFF0E4;
+}
+.navbar{
+  margin: 10px 30px;
+}
+.heading{
+text-align: center;
+margin-bottom: 40px;
+}
+.latest-news{
+  padding: 20px 20px;
+
+}
+
+.news-box img{
+  width: 380px;
+  height: 250px;
+}
+
+.news-div{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin: 0 60px;
+}

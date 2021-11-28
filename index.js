@@ -11,5 +11,5 @@ app.on('ready', () => {
 			nodeIntegration: true
 		}
 	});
-	window.loadFile('index.html');
+	window.loadURL('http://localhost:3000')
 })
