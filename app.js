@@ -22,14 +22,14 @@ app.use(express.static("public"));
 app.get("/", async (req, res)=>{
 const apiKey = process.env.API_KEY;
 try{
-// var url = 'http://newsapi.org/v2/top-headlines?' +
-//           'country=in&' +
-//           'apiKey='+apiKey;
+var url = 'http://newsapi.org/v2/top-headlines?' +
+          'country=in&' +
+          'apiKey='+apiKey;
 
-//         const news_get =await axios.get(url)
-//         console.log(news_get);
-//         res.render('home',{articles:news_get.data.articles})
-        res.render('home');
+        const news_get =await axios.get(url)
+        console.log(news_get);
+        res.render('home',{articles:news_get.data.articles})
+        // res.render('home');
   console.log("hello");
   // https.get(url, (response)=>{
   //   response.on("data",(data)=>{
