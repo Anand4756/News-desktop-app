@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title></title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="../public/styles.css">
   </head>
   <body>
   <div class="navbar">
@@ -12,13 +12,45 @@
 </div>
   </div>
   <hr>
+<div class="nav-category">
+<ul>
+  <a href=""><li>Sports</li></a>
+  <a href=""><li>World</li></a>
+  <a href=""><li>Economy</li></a>
+  <a href=""><li>Entertainment</li></a>
+  <a href=""><li>Trending</li></a>
+  <a href=""><li>Technology</li></a>
+</ul>
+</div>
 <section  class="latest-news">
 <div class="heading">
   <h2>Latest Updates</h2>
 </div>
 
 <div class="news-div">
+<!-- <%=articles%>
+<% articles.forEach(function(article){ %>
 
+               <% if ((typeof article.url=='object') || (typeof article.title=='object') || (typeof article.urlToImage=='object') || (typeof article.content=='object')){ %>
+                   <% } else{ %>
+                       <a href="<%= article.url %>" target="_blank" class="news-box Hover-effect">
+
+                           <img src="<%= article.urlToImage %>" alt="Image">
+                           <h3>
+                               <%= article.title %>
+                           </h3>
+
+
+                           <p>
+                               <%= article.content %>
+                           </p>
+                           <br>
+
+
+
+                       </a>
+                       <% } %>
+                       <% }) %> -->
 <div class="news-box1">
   <img src="https://1734811051.rsc.cdn77.org/data/images/full/396957/tesla-delivery-cost-cutting-as-companys-main-focus-in-2021s-last-quarter-heres-what-elon-musk-says.jpg">
   <h3>Tesla Delivery Cost Cutting as Company's Main Focus in 2021's Last Quarter! Here's What Elon Musk Says</h3>
