@@ -28,13 +28,39 @@
 </div>
 
 <div class="news-div">
-  
+ 
        
 <div class="news-box1">
-   
+
+    <% if ((typeof articles2.url=='object') || (typeof articles2.title=='object') || (typeof articles2.urlToImage=='object') || (typeof articles2.content=='object')){ %>
+      <% } else{ %>
+        <a href="<%= articles2.url %>" target="_blank">
+          <img src="<%= articles2.urlToImage %>" alt="Image">
+          <h3>
+              <%= articles2.title %>
+          </h3>
+          <p>
+              <%= articles2.content %>
+          </p>
+        </a>
+          <br>
+          <% } %>
+      
 </div>
 <div class="news-box2">
-  
+  <% if ((typeof articles3.url=='object') || (typeof articles3.title=='object') || (typeof articles3.urlToImage=='object') || (typeof articles3.content=='object')){ %>
+    <% } else{ %>
+      <a href="<%= articles3.url %>" target="_blank">
+        <img src="<%= articles3.urlToImage %>" alt="Image">
+        <h3>
+            <%= articles3.title %>
+        </h3>
+        <p>
+            <%= articles3.content %>
+        </p>
+      </a>
+        <br>
+        <% } %>
   
 </div>
 </div>
@@ -45,14 +71,16 @@
   <% articles.forEach(function(article){ %>
     <% if ((typeof article.url=='object') || (typeof article.title=='object') || (typeof article.urlToImage=='object') || (typeof article.content=='object')){ %>
       <% } else{ %>
-        <a href="<%= article.url %>" target="_blank" class="news-box Hover-effect">
+        <a href="<%= article.url %>" target="_blank">
           <img src="<%= article.urlToImage %>" alt="Image">
           <h3>
               <%= article.title %>
           </h3>
+          
           <p>
               <%= article.content %>
           </p>
+
           <br>
           <% } %>
       <% }) %>
