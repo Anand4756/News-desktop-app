@@ -27,8 +27,8 @@ var url = 'http://newsapi.org/v2/top-headlines?' +
           'apiKey='+apiKey;
 
         const news_get =await axios.get(url)
-        console.log(news_get);
-        res.render('home',{articles:news_get.data.articles})
+        
+        res.render('home',{articles:news_get.data.articles.slice(2,-1), articles2: news_get.data.articles[0],articles3: news_get.data.articles[1]})
         // res.render('home');
   console.log("hello");
   // https.get(url, (response)=>{
