@@ -50,5 +50,5 @@ var url = 'http://newsapi.org/v2/top-headlines?' +
 const port = process.env.PORT || 3000;
 
 app.listen(port,()=>{
-  console.log("server started at $port");
+  console.log("server started at " + port);
 })

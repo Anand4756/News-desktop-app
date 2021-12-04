@@ -11,5 +11,5 @@ app.on('ready', () => {
 			nodeIntegration: true
 		}
 	});
-	window.loadURL('http://localhost:3000')
+	window.loadURL('https://better-news.herokuapp.com');
 })
