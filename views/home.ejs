@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>Better News</title>
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
@@ -20,6 +20,7 @@
   <a href=""><li>Entertainment</li></a>
   <a href=""><li>Trending</li></a>
   <a href=""><li>Technology</li></a>
+  <a href=""><li>Cricket</li></a>
 </ul>
 </div>
 <section  class="latest-news">
@@ -84,8 +85,34 @@
           <br>
           <% } %>
       <% }) %>
+    </a>
           </div>
   
+<section>
+  <div class="sports-section">
+  <div class="heading">
+  <h2>Cricket</h2>
+  </div>
+  <div class="sports-news">
+ <% cricket.forEach(function(article){ %>
+    <% if ((typeof article.url=='object') || (typeof article.title=='object') || (typeof article.urlToImage=='object') || (typeof article.content=='object')){ %>
+      <% } else{ %>
+        <a href="<%= article.url %>" target="_blank">
+          <img src="<%= article.urlToImage %>" alt="Image">
+          <h3>
+              <%= article.title %>
+          </h3>
+          
+          <p>
+              <%= article.content %>
+          </p>
 
+          <br>
+          <% } %>
+      <% }) %>
+  </div>
+  </div>
+
+</section>
   </body>
 </html>
